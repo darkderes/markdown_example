@@ -102,6 +102,7 @@ Descripción clara y concisa del bug.
 
 **Para Reproducir**
 Pasos para reproducir el comportamiento:
+
 1. Ve a '...'
 2. Haz clic en '....'
 3. Desplázate hacia '....'
@@ -114,6 +115,7 @@ Descripción clara de lo que esperabas que ocurriera.
 Si aplica, añade screenshots para explicar el problema.
 
 **Información Adicional**
+
 - OS: [ej. macOS, Windows, Linux]
 - Navegador: [ej. Chrome, Safari]
 - Versión: [ej. 22]
@@ -126,6 +128,7 @@ Si aplica, añade screenshots para explicar el problema.
 Breve descripción de los cambios realizados.
 
 **Tipo de Cambio**
+
 - [ ] Bug fix (no rompe funcionalidad existente)
 - [ ] Nueva característica (no rompe funcionalidad existente)
 - [ ] Breaking change (cambio que causa que funcionalidad existente no funcione)
@@ -135,6 +138,7 @@ Breve descripción de los cambios realizados.
 Describe las pruebas que realizaste para verificar tus cambios.
 
 **Checklist:**
+
 - [ ] Mi código sigue las guías de estilo
 - [ ] He realizado una auto-revisión de mi código
 - [ ] He comentado mi código en áreas difíciles de entender
@@ -146,6 +150,7 @@ Describe las pruebas que realizaste para verificar tus cambios.
 ## 🏷️ Etiquetas
 
 ### Para Issues
+
 - `bug` - Algo no funciona
 - `enhancement` - Nueva característica o solicitud
 - `documentation` - Mejoras o adiciones a documentación
@@ -154,6 +159,7 @@ Describe las pruebas que realizaste para verificar tus cambios.
 - `question` - Información adicional solicitada
 
 ### Para Pull Requests
+
 - `ready for review` - Listo para revisión
 - `work in progress` - Trabajo en progreso
 - `needs changes` - Necesita cambios antes de merge

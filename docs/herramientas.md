@@ -3,7 +3,9 @@
 ## Editores de Markdown
 
 ### Visual Studio Code
+
 **Extensiones recomendadas:**
+
 - Markdown All in One
 - Markdown Preview Enhanced
 - markdownlint
@@ -11,6 +13,7 @@
 - Paste Image
 
 **Configuración sugerida:**
+
 ```json
 {
   "markdown.preview.fontSize": 14,
@@ -21,12 +24,14 @@
 ```
 
 ### Typora
+
 - Editor WYSIWYG
 - Vista previa en tiempo real
 - Soporte para matemáticas y diagramas
 - Temas personalizables
 
 ### Mark Text
+
 - Editor gratuito y de código abierto
 - Vista previa en tiempo real
 - Soporte para Mermaid y matemáticas
@@ -37,17 +42,20 @@
 ### markdownlint
 
 Instalar:
+
 ```bash
 npm install -g markdownlint-cli
 ```
 
 Uso:
+
 ```bash
 markdownlint *.md
 markdownlint docs/
 ```
 
 Configuración (`.markdownlint.json`):
+
 ```json
 {
   "MD013": {
@@ -61,6 +69,7 @@ Configuración (`.markdownlint.json`):
 ### Prettier
 
 Configuración para Markdown:
+
 ```json
 {
   "printWidth": 80,
@@ -80,6 +89,7 @@ Configuración para Markdown:
 ## Generadores de Sitios
 
 ### GitBook
+
 ```bash
 npm install -g gitbook-cli
 gitbook init
@@ -87,6 +97,7 @@ gitbook serve
 ```
 
 ### Docsify
+
 ```bash
 npm install -g docsify-cli
 docsify init ./docs
@@ -94,6 +105,7 @@ docsify serve docs
 ```
 
 ### VuePress
+
 ```bash
 npm install -g vuepress
 mkdir docs && echo '# Hello VuePress' > docs/README.md
@@ -103,6 +115,7 @@ vuepress dev docs
 ## Conversores de Formato
 
 ### Pandoc
+
 Convertir Markdown a otros formatos:
 
 ```bash
@@ -117,6 +130,7 @@ pandoc documento.md -o documento.html
 ```
 
 ### markdown-pdf (Node.js)
+
 ```bash
 npm install -g markdown-pdf
 markdown-pdf documento.md
@@ -125,16 +139,19 @@ markdown-pdf documento.md
 ## Herramientas Online
 
 ### Editores Online
+
 - **Dillinger**: Editor online con vista previa
 - **StackEdit**: Editor con sincronización en la nube
 - **Markdown Editor**: Simple y rápido
 - **HackMD**: Colaborativo en tiempo real
 
 ### Generadores de Tablas
+
 - **Tables Generator**: Crea tablas Markdown visualmente
 - **Markdown Table Generator**: Generador simple de tablas
 
 ### Diagramas
+
 - **Mermaid Live Editor**: Editor online para diagramas Mermaid
 - **Draw.io**: Diagramas que se pueden exportar como SVG
 
@@ -143,18 +160,20 @@ markdown-pdf documento.md
 ### Pre-commit hooks
 
 `.pre-commit-config.yaml`:
+
 ```yaml
 repos:
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.31.1
     hooks:
       - id: markdownlint
-        args: ['--fix']
+        args: ["--fix"]
 ```
 
 ### GitHub Actions
 
 `.github/workflows/markdown-lint.yml`:
+
 ```yaml
 name: Markdown Lint
 
@@ -168,7 +187,7 @@ jobs:
       - name: Lint Markdown files
         uses: avto-dev/markdown-lint@v1
         with:
-          args: '**/*.md'
+          args: "**/*.md"
 ```
 
 ## Mejores Prácticas para Herramientas
@@ -176,6 +195,7 @@ jobs:
 ### 1. Configuración de Proyecto
 
 Crear `.editorconfig`:
+
 ```ini
 root = true
 
@@ -191,6 +211,7 @@ indent_size = 2
 ### 2. Scripts NPM útiles
 
 `package.json`:
+
 ```json
 {
   "scripts": {
@@ -205,13 +226,14 @@ indent_size = 2
 ### 3. Plantillas de Issues y PRs
 
 `.github/ISSUE_TEMPLATE/bug_report.md`:
+
 ```markdown
 ---
 name: Bug report
 about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+title: ""
+labels: ""
+assignees: ""
 ---
 
 **Describe the bug**
@@ -219,6 +241,7 @@ A clear and concise description of what the bug is.
 
 **To Reproduce**
 Steps to reproduce the behavior:
+
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
@@ -231,9 +254,10 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+
+- OS: [e.g. iOS]
+- Browser [e.g. chrome, safari]
+- Version [e.g. 22]
 
 **Additional context**
 Add any other context about the problem here.
@@ -242,6 +266,7 @@ Add any other context about the problem here.
 ## Automatización
 
 ### Generar Tabla de Contenidos
+
 ```bash
 # Con markdown-toc
 npm install -g markdown-toc
@@ -249,6 +274,7 @@ markdown-toc -i README.md
 ```
 
 ### Validación Automática
+
 ```bash
 # Script de validación
 #!/bin/bash

@@ -98,20 +98,21 @@ Registra un nuevo usuario.
 Obtiene la lista de usuarios con paginación.
 
 **Headers requeridos:**
+
 ```
 Authorization: Bearer <token>
 ```
 
 **Query Parameters:**
 
-| Parámetro | Tipo | Descripción | Default |
-|-----------|------|-------------|---------|
-| `page` | `number` | Número de página | 1 |
-| `limit` | `number` | Usuarios por página | 10 |
-| `search` | `string` | Búsqueda por nombre o email | - |
-| `role` | `string` | Filtrar por rol | - |
-| `sort` | `string` | Campo de ordenamiento | name |
-| `order` | `string` | Dirección (asc/desc) | asc |
+| Parámetro | Tipo     | Descripción                 | Default |
+| --------- | -------- | --------------------------- | ------- |
+| `page`    | `number` | Número de página            | 1       |
+| `limit`   | `number` | Usuarios por página         | 10      |
+| `search`  | `string` | Búsqueda por nombre o email | -       |
+| `role`    | `string` | Filtrar por rol             | -       |
+| `sort`    | `string` | Campo de ordenamiento       | name    |
+| `order`   | `string` | Dirección (asc/desc)        | asc     |
 
 **Ejemplo de petición:**
 
@@ -154,6 +155,7 @@ curl -X GET "http://localhost:3000/api/users?page=1&limit=5&search=juan" \
 Obtiene un usuario específico por ID.
 
 **Parámetros de ruta:**
+
 - `id` - ID del usuario (ObjectId de MongoDB)
 
 **Respuesta exitosa (200):**
@@ -230,16 +232,16 @@ Elimina un usuario (soft delete).
 
 ## 📊 Códigos de Estado
 
-| Código | Descripción |
-|--------|-------------|
-| 200 | Éxito |
-| 201 | Creado |
-| 400 | Petición incorrecta |
-| 401 | No autorizado |
-| 403 | Prohibido |
-| 404 | No encontrado |
-| 422 | Entidad no procesable |
-| 500 | Error interno del servidor |
+| Código | Descripción                |
+| ------ | -------------------------- |
+| 200    | Éxito                      |
+| 201    | Creado                     |
+| 400    | Petición incorrecta        |
+| 401    | No autorizado              |
+| 403    | Prohibido                  |
+| 404    | No encontrado              |
+| 422    | Entidad no procesable      |
+| 500    | Error interno del servidor |
 
 ## 🔒 Autenticación y Autorización
 
@@ -253,11 +255,11 @@ Authorization: Bearer <token>
 
 ### Roles de Usuario
 
-| Rol | Permisos |
-|-----|----------|
-| `admin` | Acceso completo a todos los endpoints |
-| `moderator` | Puede ver y editar usuarios |
-| `user` | Puede ver su propio perfil y editarlo |
+| Rol         | Permisos                              |
+| ----------- | ------------------------------------- |
+| `admin`     | Acceso completo a todos los endpoints |
+| `moderator` | Puede ver y editar usuarios           |
+| `user`      | Puede ver su propio perfil y editarlo |
 
 ## 🚨 Manejo de Errores
 
@@ -279,15 +281,15 @@ Authorization: Bearer <token>
 
 ### Códigos de Error Comunes
 
-| Código | Descripción |
-|--------|-------------|
-| `INVALID_CREDENTIALS` | Credenciales de login incorrectas |
-| `TOKEN_EXPIRED` | Token JWT expirado |
-| `TOKEN_INVALID` | Token JWT inválido |
-| `USER_NOT_FOUND` | Usuario no encontrado |
-| `EMAIL_ALREADY_EXISTS` | El email ya está registrado |
-| `INSUFFICIENT_PERMISSIONS` | Permisos insuficientes |
-| `VALIDATION_ERROR` | Error de validación de datos |
+| Código                     | Descripción                       |
+| -------------------------- | --------------------------------- |
+| `INVALID_CREDENTIALS`      | Credenciales de login incorrectas |
+| `TOKEN_EXPIRED`            | Token JWT expirado                |
+| `TOKEN_INVALID`            | Token JWT inválido                |
+| `USER_NOT_FOUND`           | Usuario no encontrado             |
+| `EMAIL_ALREADY_EXISTS`     | El email ya está registrado       |
+| `INSUFFICIENT_PERMISSIONS` | Permisos insuficientes            |
+| `VALIDATION_ERROR`         | Error de validación de datos      |
 
 ## 📝 Modelos de Datos
 
@@ -316,9 +318,9 @@ Authorization: Bearer <token>
 ### JavaScript/Node.js
 
 ```javascript
-const axios = require('axios');
+const axios = require("axios");
 
-const API_BASE_URL = 'http://localhost:3000/api';
+const API_BASE_URL = "http://localhost:3000/api";
 let authToken = null;
 
 // Login
@@ -326,13 +328,13 @@ async function login(email, password) {
   try {
     const response = await axios.post(`${API_BASE_URL}/auth/login`, {
       email,
-      password
+      password,
     });
-    
+
     authToken = response.data.data.token;
     return response.data.data.user;
   } catch (error) {
-    console.error('Error en login:', error.response.data);
+    console.error("Error en login:", error.response.data);
     throw error;
   }
 }
@@ -343,13 +345,13 @@ async function getUsers(page = 1, limit = 10) {
     const response = await axios.get(`${API_BASE_URL}/users`, {
       params: { page, limit },
       headers: {
-        'Authorization': `Bearer ${authToken}`
-      }
+        Authorization: `Bearer ${authToken}`,
+      },
     });
-    
+
     return response.data.data;
   } catch (error) {
-    console.error('Error obteniendo usuarios:', error.response.data);
+    console.error("Error obteniendo usuarios:", error.response.data);
     throw error;
   }
 }
@@ -357,11 +359,11 @@ async function getUsers(page = 1, limit = 10) {
 // Uso
 (async () => {
   try {
-    await login('admin@ejemplo.com', 'admin123');
+    await login("admin@ejemplo.com", "admin123");
     const users = await getUsers(1, 5);
-    console.log('Usuarios:', users);
+    console.log("Usuarios:", users);
   } catch (error) {
-    console.error('Error:', error.message);
+    console.error("Error:", error.message);
   }
 })();
 ```
@@ -376,27 +378,27 @@ class UserAPI:
     def __init__(self, base_url):
         self.base_url = base_url
         self.token = None
-    
+
     def login(self, email, password):
         response = requests.post(f"{self.base_url}/auth/login", json={
             "email": email,
             "password": password
         })
-        
+
         if response.status_code == 200:
             data = response.json()
             self.token = data["data"]["token"]
             return data["data"]["user"]
         else:
             raise Exception(f"Login failed: {response.json()}")
-    
+
     def get_users(self, page=1, limit=10):
         headers = {"Authorization": f"Bearer {self.token}"}
         params = {"page": page, "limit": limit}
-        
-        response = requests.get(f"{self.base_url}/users", 
+
+        response = requests.get(f"{self.base_url}/users",
                               headers=headers, params=params)
-        
+
         if response.status_code == 200:
             return response.json()["data"]
         else:
@@ -427,32 +429,32 @@ npm run test:coverage
 ### Ejemplo de Test
 
 ```javascript
-describe('POST /api/auth/login', () => {
-  it('should login with valid credentials', async () => {
+describe("POST /api/auth/login", () => {
+  it("should login with valid credentials", async () => {
     const res = await request(app)
-      .post('/api/auth/login')
+      .post("/api/auth/login")
       .send({
-        email: 'test@ejemplo.com',
-        password: 'password123'
+        email: "test@ejemplo.com",
+        password: "password123",
       })
       .expect(200);
 
     expect(res.body.success).toBe(true);
     expect(res.body.data.token).toBeDefined();
-    expect(res.body.data.user.email).toBe('test@ejemplo.com');
+    expect(res.body.data.user.email).toBe("test@ejemplo.com");
   });
 
-  it('should reject invalid credentials', async () => {
+  it("should reject invalid credentials", async () => {
     const res = await request(app)
-      .post('/api/auth/login')
+      .post("/api/auth/login")
       .send({
-        email: 'test@ejemplo.com',
-        password: 'wrongpassword'
+        email: "test@ejemplo.com",
+        password: "wrongpassword",
       })
       .expect(401);
 
     expect(res.body.success).toBe(false);
-    expect(res.body.error.code).toBe('INVALID_CREDENTIALS');
+    expect(res.body.error.code).toBe("INVALID_CREDENTIALS");
   });
 });
 ```
@@ -476,11 +478,13 @@ Esta API sigue semantic versioning (SemVer):
 ### Changelog
 
 #### v1.1.0 (2024-01-15)
+
 - ✅ Añadido endpoint de búsqueda de usuarios
 - ✅ Implementado rate limiting
 - 🔧 Mejorado manejo de errores
 
 #### v1.0.0 (2024-01-01)
+
 - 🎉 Versión inicial de la API
 - ✅ CRUD de usuarios
 - ✅ Autenticación JWT

@@ -33,6 +33,7 @@ Content-Type: application/json
 ```
 
 **Respuesta:**
+
 ```json
 {
   "success": true,
@@ -55,11 +56,11 @@ GET /users
 
 **Parámetros de consulta:**
 
-| Parámetro | Tipo | Descripción | Ejemplo |
-|-----------|------|-------------|---------|
-| `page` | `integer` | Número de página | `?page=1` |
-| `limit` | `integer` | Elementos por página | `?limit=10` |
-| `search` | `string` | Buscar por nombre | `?search=juan` |
+| Parámetro | Tipo      | Descripción          | Ejemplo        |
+| --------- | --------- | -------------------- | -------------- |
+| `page`    | `integer` | Número de página     | `?page=1`      |
+| `limit`   | `integer` | Elementos por página | `?limit=10`    |
+| `search`  | `string`  | Buscar por nombre    | `?search=juan` |
 
 **Respuesta exitosa (200):**
 
@@ -114,16 +115,16 @@ Content-Type: application/json
 
 ## Códigos de Estado
 
-| Código | Descripción |
-|--------|-------------|
-| 200 | Éxito |
-| 201 | Creado |
-| 400 | Petición incorrecta |
-| 401 | No autorizado |
-| 403 | Prohibido |
-| 404 | No encontrado |
-| 422 | Entidad no procesable |
-| 500 | Error interno del servidor |
+| Código | Descripción                |
+| ------ | -------------------------- |
+| 200    | Éxito                      |
+| 201    | Creado                     |
+| 400    | Petición incorrecta        |
+| 401    | No autorizado              |
+| 403    | Prohibido                  |
+| 404    | No encontrado              |
+| 422    | Entidad no procesable      |
+| 500    | Error interno del servidor |
 
 ## Manejo de Errores
 
@@ -161,18 +162,18 @@ X-RateLimit-Reset: 1609459200
 ### JavaScript (Fetch)
 
 ```javascript
-const API_BASE = 'https://api.ejemplo.com/v1';
-const token = 'tu_token_aqui';
+const API_BASE = "https://api.ejemplo.com/v1";
+const token = "tu_token_aqui";
 
 // Obtener usuarios
 async function getUsers() {
   const response = await fetch(`${API_BASE}/users`, {
     headers: {
-      'Authorization': `Bearer ${token}`,
-      'Content-Type': 'application/json'
-    }
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
   });
-  
+
   const data = await response.json();
   return data;
 }
@@ -180,14 +181,14 @@ async function getUsers() {
 // Crear usuario
 async function createUser(userData) {
   const response = await fetch(`${API_BASE}/users`, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Authorization': `Bearer ${token}`,
-      'Content-Type': 'application/json'
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(userData)
+    body: JSON.stringify(userData),
   });
-  
+
   return await response.json();
 }
 ```
@@ -254,11 +255,13 @@ Content-Type: application/json
 ## Changelog
 
 ### v1.1.0 (2024-01-15)
+
 - ✅ Agregado endpoint de búsqueda
 - ✅ Implementados webhooks
 - 🔧 Mejorado rate limiting
 
 ### v1.0.0 (2024-01-01)
+
 - 🎉 Versión inicial de la API
 - ✅ CRUD básico de usuarios
 - ✅ Autenticación JWT

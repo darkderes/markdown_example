@@ -3,6 +3,7 @@
 Una plantilla completa con todas las secciones recomendadas para proyectos de desarrollo de software.
 
 <!-- PROJECT SHIELDS -->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -60,6 +61,7 @@ Una plantilla completa con todas las secciones recomendadas para proyectos de de
 </details>
 
 <!-- ABOUT THE PROJECT -->
+
 ## Acerca del Proyecto
 
 [![Captura de pantalla del producto][product-screenshot]](https://ejemplo.com)
@@ -72,18 +74,19 @@ Aquí hay una página en blanco para que comiences: **Para evitar reescribir dem
 
 Esta sección debería listar los principales frameworks/bibliotecas utilizados para arrancar tu proyecto.
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+- [![Next][Next.js]][Next-url]
+- [![React][React.js]][React-url]
+- [![Vue][Vue.js]][Vue-url]
+- [![Angular][Angular.io]][Angular-url]
+- [![Svelte][Svelte.dev]][Svelte-url]
+- [![Laravel][Laravel.com]][Laravel-url]
+- [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+- [![JQuery][JQuery.com]][JQuery-url]
 
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
 <!-- GETTING STARTED -->
+
 ## Comenzando
 
 Para obtener una copia local en funcionamiento, sigue estos sencillos pasos de ejemplo.
@@ -91,7 +94,8 @@ Para obtener una copia local en funcionamiento, sigue estos sencillos pasos de e
 ### Prerrequisitos
 
 Esta es la lista de cosas que necesitas para usar el software y cómo instalarlas.
-* npm
+
+- npm
   ```sh
   npm install npm@latest -g
   ```
@@ -111,12 +115,13 @@ _A continuación se muestra un ejemplo de cómo puedes instruir a tu audiencia s
    ```
 4. Ingresa tu API en `config.js`
    ```js
-   const API_KEY = 'INGRESA TU API';
+   const API_KEY = "INGRESA TU API";
    ```
 
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
 <!-- USAGE EXAMPLES -->
+
 ## Uso
 
 Usa this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
@@ -126,6 +131,7 @@ _Para más ejemplos, por favor consulta la [Documentación](https://ejemplo.com)
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
 <!-- ROADMAP -->
+
 ## Roadmap
 
 - [x] Agregar Changelog
@@ -133,14 +139,15 @@ _Para más ejemplos, por favor consulta la [Documentación](https://ejemplo.com)
 - [ ] Agregar Ejemplos Adicionales de Plantillas w/ ejemplos
 - [ ] Agregar "componentes" de documentos para copiar y pegar fácilmente secciones del readme
 - [ ] Soporte Multi-idioma
-    - [ ] Chino
-    - [ ] Español
+  - [ ] Chino
+  - [ ] Español
 
 Consulta los [issues abiertos](https://github.com/tu_usuario/tu_proyecto/issues) para obtener una lista completa de características propuestas (y problemas conocidos).
 
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
 <!-- CONTRIBUTING -->
+
 ## Contribuir
 
 Las contribuciones son lo que hace que la comunidad de código abierto sea un lugar tan increíble para aprender, inspirar y crear. Cualquier contribución que hagas es **muy apreciada**.
@@ -157,6 +164,7 @@ Si tienes una sugerencia que haría que esto fuera mejor, por favor bifurca el r
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
 <!-- LICENSE -->
+
 ## Licencia
 
 Distribuido bajo la Licencia MIT. Consulta `LICENSE.txt` para obtener más información.
@@ -164,6 +172,7 @@ Distribuido bajo la Licencia MIT. Consulta `LICENSE.txt` para obtener más infor
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
 <!-- CONTACT -->
+
 ## Contacto
 
 Tu Nombre - [@tu_twitter](https://twitter.com/tu_twitter) - email@email_client.com
@@ -173,23 +182,25 @@ Enlace del Proyecto: [https://github.com/tu_usuario/tu_proyecto](https://github.
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
+
 ## Agradecimientos
 
 Usa este espacio para enumerar los recursos que encuentres útiles y a los que te gustaría dar crédito. ¡He incluido algunos de mis favoritos para comenzar!
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+- [Choose an Open Source License](https://choosealicense.com)
+- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+- [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
+- [Malven's Grid Cheatsheet](https://grid.malven.co/)
+- [Img Shields](https://shields.io)
+- [GitHub Pages](https://pages.github.com)
+- [Font Awesome](https://fontawesome.com)
+- [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/tu_usuario/tu_proyecto.svg?style=for-the-badge
 [contributors-url]: https://github.com/tu_usuario/tu_proyecto/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/tu_usuario/tu_proyecto.svg?style=for-the-badge

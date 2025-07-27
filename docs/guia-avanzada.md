@@ -7,6 +7,7 @@
 GitHub extiende Markdown con características adicionales:
 
 #### Listas de tareas
+
 ```markdown
 - [x] Tarea completada
 - [ ] Tarea pendiente
@@ -14,11 +15,13 @@ GitHub extiende Markdown con características adicionales:
 ```
 
 Resultado:
+
 - [x] Tarea completada
 - [ ] Tarea pendiente
 - [ ] Otra tarea pendiente
 
 #### Menciones y referencias
+
 ```markdown
 @usuario
 #123 (referencia a issue)
@@ -26,6 +29,7 @@ SHA: a5c3785ed8d6a35868bc169f07e40e889087fd2e
 ```
 
 #### Emojis
+
 ```markdown
 :smile: :heart: :thumbsup: :rocket: :bug: :warning:
 ```
@@ -34,7 +38,7 @@ Resultado: 😄 ❤️ 👍 🚀 🐛 ⚠️
 
 ### Diagramas con Mermaid
 
-```markdown
+````markdown
 ```mermaid
 graph TD
     A[Inicio] --> B{¿Condición?}
@@ -43,7 +47,9 @@ graph TD
     C --> E[Fin]
     D --> E
 ```
-```
+````
+
+````
 
 ### Bloques de código con resaltado
 
@@ -57,8 +63,9 @@ def fibonacci(n):
 
 # Ejemplo de uso
 print(fibonacci(10))  # Output: 55
-```
-```
+````
+
+````
 
 ### Tablas avanzadas
 
@@ -69,7 +76,7 @@ print(fibonacci(10))  # Output: 55
 | Alineación centro | ✅ | Con `:---:` |
 | Alineación der | ✅ | Con `---:` |
 | Celdas vacías | ✅ | Permitido |
-```
+````
 
 ## Mejores Prácticas para Desarrollo
 
@@ -77,7 +84,7 @@ print(fibonacci(10))  # Output: 55
 
 Un buen README debe incluir:
 
-```markdown
+````markdown
 # Nombre del Proyecto
 
 Descripción breve pero clara del proyecto.
@@ -100,11 +107,12 @@ git clone https://github.com/usuario/proyecto.git
 cd proyecto
 npm install
 ```
+````
 
 ## 💻 Uso
 
 ```javascript
-const miProyecto = require('./index');
+const miProyecto = require("./index");
 miProyecto.iniciar();
 ```
 
@@ -129,7 +137,8 @@ Distribuido bajo la Licencia MIT. Ver `LICENSE` para más información.
 ## 📞 Contacto
 
 Tu Nombre - [@tutwitter](https://twitter.com/tutwitter) - email@ejemplo.com
-```
+
+````
 
 ### 2. Documentación de API
 
@@ -160,13 +169,15 @@ Obtiene la lista de usuarios.
   "page": 1,
   "limit": 10
 }
-```
+````
 
 **Códigos de estado:**
+
 - `200` - Éxito
 - `400` - Parámetros inválidos
 - `500` - Error del servidor
-```
+
+````
 
 ### 3. Changelog
 
@@ -189,7 +200,7 @@ Todos los cambios notables de este proyecto serán documentados en este archivo.
 ### Arreglado
 - Corregido error en el formulario de login
 - Solucionado problema de memoria
-```
+````
 
 ### 4. Guías de Contribución
 
@@ -215,13 +226,14 @@ Todos los cambios notables de este proyecto serán documentados en este archivo.
 ## Mensaje de Commit
 
 Sigue el formato conventional commits:
-
 ```
+
 tipo(alcance): descripción
 
 [cuerpo opcional]
 
 [pie opcional]
+
 ```
 
 Ejemplos:
@@ -233,17 +245,20 @@ Ejemplos:
 ## Herramientas Recomendadas
 
 ### Editores con soporte Markdown
+
 - VS Code con extensiones Markdown
 - Typora
 - Mark Text
 - Notion
 
 ### Linters y formateadores
+
 - markdownlint
 - prettier
 - remark
 
 ### Generadores de documentación
+
 - GitBook
 - Docsify
 - VuePress

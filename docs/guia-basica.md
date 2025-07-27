@@ -16,31 +16,38 @@ Markdown es un lenguaje de marcado ligero que permite dar formato a texto plano 
 
 ```markdown
 # Encabezado Nivel 1
+
 ## Encabezado Nivel 2
+
 ### Encabezado Nivel 3
+
 #### Encabezado Nivel 4
+
 ##### Encabezado Nivel 5
+
 ###### Encabezado Nivel 6
 ```
 
 ### Énfasis
 
 ```markdown
-*Texto en cursiva* o _texto en cursiva_
-**Texto en negrita** o __texto en negrita__
-***Texto en cursiva y negrita***
+_Texto en cursiva_ o _texto en cursiva_
+**Texto en negrita** o **texto en negrita**
+**_Texto en cursiva y negrita_**
 ~~Texto tachado~~
 ```
 
 Resultado:
-- *Texto en cursiva*
+
+- _Texto en cursiva_
 - **Texto en negrita**
-- ***Texto en cursiva y negrita***
+- **_Texto en cursiva y negrita_**
 - ~~Texto tachado~~
 
 ### Listas
 
 #### Lista no ordenada
+
 ```markdown
 - Elemento 1
 - Elemento 2
@@ -50,6 +57,7 @@ Resultado:
 ```
 
 #### Lista ordenada
+
 ```markdown
 1. Primer elemento
 2. Segundo elemento
@@ -78,18 +86,22 @@ Resultado:
 ### Código
 
 #### Código en línea
+
 ```markdown
 Use la función `console.log()` para depurar.
 ```
 
 #### Bloques de código
-```markdown
+
+````markdown
 ```javascript
 function saludo(nombre) {
-    console.log(`Hola, ${nombre}!`);
+  console.log(`Hola, ${nombre}!`);
 }
 ```
-```
+````
+
+````
 
 ### Citas
 
@@ -98,13 +110,13 @@ function saludo(nombre) {
 > Puede tener múltiples líneas.
 >
 > Y múltiples párrafos.
-```
+````
 
 ### Tablas
 
 ```markdown
 | Columna 1 | Columna 2 | Columna 3 |
-|-----------|-----------|-----------|
+| --------- | --------- | --------- |
 | Fila 1    | Dato 1    | Dato 2    |
 | Fila 2    | Dato 3    | Dato 4    |
 ```

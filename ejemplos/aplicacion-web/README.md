@@ -11,6 +11,7 @@ Una aplicación web moderna y responsiva para gestión de tareas y proyectos, co
 ## 🌟 Características Principales
 
 ### ✅ Gestión de Tareas
+
 - ✏️ Crear, editar y eliminar tareas
 - 🏷️ Categorización con etiquetas
 - 📅 Fechas límite y recordatorios
@@ -18,6 +19,7 @@ Una aplicación web moderna y responsiva para gestión de tareas y proyectos, co
 - 🔍 Búsqueda y filtrado avanzado
 
 ### 👥 Colaboración
+
 - 🤝 Asignación de tareas a usuarios
 - 💬 Comentarios en tiempo real
 - 📄 Adjuntar archivos y documentos
@@ -25,6 +27,7 @@ Una aplicación web moderna y responsiva para gestión de tareas y proyectos, co
 - 📈 Seguimiento de progreso
 
 ### 📊 Reportes y Analytics
+
 - 📈 Dashboard con métricas
 - 📋 Reportes de productividad
 - ⏱️ Seguimiento de tiempo
@@ -32,6 +35,7 @@ Una aplicación web moderna y responsiva para gestión de tareas y proyectos, co
 - 📤 Exportar a PDF/Excel
 
 ### 🔧 Características Técnicas
+
 - 📱 Diseño responsivo
 - 🌙 Modo oscuro/claro
 - 🔄 Sincronización offline
@@ -43,12 +47,14 @@ Una aplicación web moderna y responsiva para gestión de tareas y proyectos, co
 🌐 **Aplicación**: [https://taskflow.ejemplo.com](https://taskflow.ejemplo.com)
 
 **Credenciales de prueba:**
+
 - Usuario: `demo@taskflow.com`
 - Contraseña: `demo123`
 
 ## 🏗️ Arquitectura
 
 ### Frontend (React)
+
 ```
 src/
 ├── components/          # Componentes reutilizables
@@ -68,6 +74,7 @@ src/
 ```
 
 ### Backend (Node.js/Express)
+
 ```
 server/
 ├── controllers/        # Controladores de rutas
@@ -91,12 +98,14 @@ server/
 ### Instalación Local
 
 1. **Clonar el repositorio**
+
    ```bash
    git clone https://github.com/tu-usuario/taskflow.git
    cd taskflow
    ```
 
 2. **Instalar dependencias**
+
    ```bash
    # Instalar dependencias del servidor
    cd server
@@ -108,10 +117,11 @@ server/
    ```
 
 3. **Configurar variables de entorno**
+
    ```bash
    # En la carpeta server/
    cp .env.example .env
-   
+
    # Editar .env con tus configuraciones
    nano .env
    ```
@@ -119,17 +129,17 @@ server/
    ```env
    # Base de datos
    MONGODB_URI=mongodb://localhost:27017/taskflow
-   
+
    # Autenticación
    JWT_SECRET=tu_jwt_secret_muy_seguro
    JWT_EXPIRE=7d
-   
+
    # Email (opcional)
    EMAIL_HOST=smtp.gmail.com
    EMAIL_PORT=587
    EMAIL_USER=tu-email@gmail.com
    EMAIL_PASS=tu-password
-   
+
    # Configuración del servidor
    NODE_ENV=development
    PORT=5000
@@ -137,16 +147,18 @@ server/
    ```
 
 4. **Inicializar la base de datos**
+
    ```bash
    cd server
    npm run seed
    ```
 
 5. **Ejecutar la aplicación**
+
    ```bash
    # Terminal 1: Servidor (desde /server)
    npm run dev
-   
+
    # Terminal 2: Cliente (desde /client)
    npm start
    ```
@@ -171,30 +183,36 @@ docker-compose up --build
 ## 📱 Capturas de Pantalla
 
 ### Dashboard Principal
+
 ![Dashboard](./docs/images/dashboard.png)
-*Vista general del dashboard con métricas y tareas recientes*
+_Vista general del dashboard con métricas y tareas recientes_
 
 ### Lista de Tareas
+
 ![Task List](./docs/images/task-list.png)
-*Lista de tareas con filtros y búsqueda*
+_Lista de tareas con filtros y búsqueda_
 
 ### Crear/Editar Tarea
+
 ![Task Form](./docs/images/task-form.png)
-*Formulario para crear y editar tareas*
+_Formulario para crear y editar tareas_
 
 ### Vista de Proyecto
+
 ![Project View](./docs/images/project-view.png)
-*Vista detallada de proyecto con tablero Kanban*
+_Vista detallada de proyecto con tablero Kanban_
 
 ### Modo Oscuro
+
 ![Dark Mode](./docs/images/dark-mode.png)
-*Interfaz en modo oscuro*
+_Interfaz en modo oscuro_
 
 ## 🔧 Desarrollo
 
 ### Stack Tecnológico
 
 **Frontend:**
+
 - ⚛️ React 18
 - 🎨 Material-UI / Styled Components
 - 🗂️ Redux Toolkit
@@ -204,6 +222,7 @@ docker-compose up --build
 - 🔄 React Query
 
 **Backend:**
+
 - 🟢 Node.js
 - ⚡ Express.js
 - 🍃 MongoDB + Mongoose
@@ -213,6 +232,7 @@ docker-compose up --build
 - ✅ Joi (validation)
 
 **DevOps:**
+
 - 🐳 Docker
 - 🔄 GitHub Actions
 - 🌐 Nginx
@@ -238,6 +258,7 @@ npm run migrate    # Ejecutar migraciones
 ### Estructura de la Base de Datos
 
 #### Colección: Users
+
 ```javascript
 {
   _id: ObjectId,
@@ -257,6 +278,7 @@ npm run migrate    # Ejecutar migraciones
 ```
 
 #### Colección: Projects
+
 ```javascript
 {
   _id: ObjectId,
@@ -273,6 +295,7 @@ npm run migrate    # Ejecutar migraciones
 ```
 
 #### Colección: Tasks
+
 ```javascript
 {
   _id: ObjectId,
@@ -303,6 +326,7 @@ npm run migrate    # Ejecutar migraciones
 ### API Endpoints
 
 #### Autenticación
+
 ```http
 POST   /api/auth/register     # Registro de usuario
 POST   /api/auth/login        # Login
@@ -313,6 +337,7 @@ POST   /api/auth/reset/:token # Resetear contraseña
 ```
 
 #### Usuarios
+
 ```http
 GET    /api/users           # Obtener usuarios
 GET    /api/users/me        # Perfil actual
@@ -322,6 +347,7 @@ DELETE /api/users/me        # Eliminar cuenta
 ```
 
 #### Proyectos
+
 ```http
 GET    /api/projects        # Listar proyectos
 POST   /api/projects        # Crear proyecto
@@ -332,6 +358,7 @@ POST   /api/projects/:id/members  # Añadir miembro
 ```
 
 #### Tareas
+
 ```http
 GET    /api/tasks           # Listar tareas
 POST   /api/tasks           # Crear tarea
@@ -345,6 +372,7 @@ POST   /api/tasks/:id/attachments # Subir archivo
 ### Testing
 
 #### Frontend
+
 ```bash
 cd client
 npm test                    # Ejecutar pruebas
@@ -353,36 +381,38 @@ npm run test:watch         # Modo watch
 ```
 
 Ejemplo de prueba:
-```javascript
-import { render, screen, fireEvent } from '@testing-library/react';
-import TaskCard from '../components/TaskCard';
 
-describe('TaskCard', () => {
+```javascript
+import { render, screen, fireEvent } from "@testing-library/react";
+import TaskCard from "../components/TaskCard";
+
+describe("TaskCard", () => {
   const mockTask = {
-    id: '1',
-    title: 'Test Task',
-    status: 'todo',
-    priority: 'high'
+    id: "1",
+    title: "Test Task",
+    status: "todo",
+    priority: "high",
   };
 
-  it('renders task information correctly', () => {
+  it("renders task information correctly", () => {
     render(<TaskCard task={mockTask} />);
-    
-    expect(screen.getByText('Test Task')).toBeInTheDocument();
-    expect(screen.getByText('High Priority')).toBeInTheDocument();
+
+    expect(screen.getByText("Test Task")).toBeInTheDocument();
+    expect(screen.getByText("High Priority")).toBeInTheDocument();
   });
 
-  it('calls onStatusChange when status is updated', () => {
+  it("calls onStatusChange when status is updated", () => {
     const mockOnStatusChange = jest.fn();
     render(<TaskCard task={mockTask} onStatusChange={mockOnStatusChange} />);
-    
-    fireEvent.click(screen.getByText('Mark as Complete'));
-    expect(mockOnStatusChange).toHaveBeenCalledWith('1', 'completed');
+
+    fireEvent.click(screen.getByText("Mark as Complete"));
+    expect(mockOnStatusChange).toHaveBeenCalledWith("1", "completed");
   });
 });
 ```
 
 #### Backend
+
 ```bash
 cd server
 npm test                    # Ejecutar pruebas
@@ -395,6 +425,7 @@ npm run test:coverage      # Con coverage
 #### Producción con Docker
 
 1. **Construir imágenes**
+
    ```bash
    docker build -t taskflow-client ./client
    docker build -t taskflow-server ./server
@@ -408,12 +439,14 @@ npm run test:coverage      # Con coverage
 #### Despliegue Manual
 
 1. **Construir frontend**
+
    ```bash
    cd client
    npm run build
    ```
 
 2. **Configurar servidor**
+
    ```bash
    cd server
    npm install --production
@@ -425,12 +458,12 @@ npm run test:coverage      # Con coverage
    server {
        listen 80;
        server_name tu-dominio.com;
-       
+
        location / {
            root /path/to/client/build;
            try_files $uri $uri/ /index.html;
        }
-       
+
        location /api {
            proxy_pass http://localhost:5000;
            proxy_set_header Host $host;
@@ -443,12 +476,12 @@ npm run test:coverage      # Con coverage
 
 ### Cobertura de Pruebas
 
-| Componente | Cobertura | Estado |
-|------------|-----------|--------|
-| Frontend Components | 85% | ✅ |
-| Backend Controllers | 90% | ✅ |
-| API Endpoints | 95% | ✅ |
-| Database Models | 80% | ⚠️ |
+| Componente          | Cobertura | Estado |
+| ------------------- | --------- | ------ |
+| Frontend Components | 85%       | ✅     |
+| Backend Controllers | 90%       | ✅     |
+| API Endpoints       | 95%       | ✅     |
+| Database Models     | 80%       | ⚠️     |
 
 ### Pruebas E2E
 
@@ -480,6 +513,7 @@ npm run cypress:open
 ## 🌍 Internacionalización
 
 Idiomas soportados:
+
 - 🇪🇸 Español (por defecto)
 - 🇺🇸 Inglés
 - 🇫🇷 Francés
@@ -530,12 +564,14 @@ Este proyecto está licenciado bajo la Licencia MIT. Ver [LICENSE](LICENSE) para
 ## 🗓️ Roadmap
 
 ### Versión 1.3.0 (Q2 2024)
+
 - [ ] Integración con calendarios externos
 - [ ] API para aplicaciones móviles
 - [ ] Plantillas de proyectos
 - [ ] Automatización de tareas
 
 ### Versión 1.4.0 (Q3 2024)
+
 - [ ] Aplicación móvil (React Native)
 - [ ] Integración con Slack/Teams
 - [ ] Reportes avanzados con IA

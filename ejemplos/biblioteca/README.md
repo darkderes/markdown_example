@@ -29,16 +29,19 @@ Una biblioteca JavaScript ligera y eficiente que proporciona funciones matemáti
 ## 🚀 Instalación
 
 ### npm
+
 ```bash
 npm install mathutils-lib
 ```
 
 ### yarn
+
 ```bash
 yarn add mathutils-lib
 ```
 
 ### CDN
+
 ```html
 <script src="https://unpkg.com/mathutils-lib@latest/dist/mathutils.min.js"></script>
 ```
@@ -46,8 +49,9 @@ yarn add mathutils-lib
 ## 💻 Uso Básico
 
 ### ES6 Modules
+
 ```javascript
-import MathUtils from 'mathutils-lib';
+import MathUtils from "mathutils-lib";
 
 // Calcular factorial
 const factorial = MathUtils.factorial(5); // 120
@@ -60,14 +64,16 @@ const fib = MathUtils.fibonacci(10); // 55
 ```
 
 ### CommonJS
+
 ```javascript
-const MathUtils = require('mathutils-lib');
+const MathUtils = require("mathutils-lib");
 
 console.log(MathUtils.gcd(48, 18)); // 6
 console.log(MathUtils.lcm(4, 6)); // 12
 ```
 
 ### Navegador
+
 ```html
 <script src="https://unpkg.com/mathutils-lib@latest/dist/mathutils.min.js"></script>
 <script>
@@ -84,11 +90,13 @@ console.log(MathUtils.lcm(4, 6)); // 12
 Calcula el factorial de un número.
 
 **Parámetros:**
+
 - `n` - Número entero no negativo
 
 **Retorna:** El factorial de n
 
 **Ejemplo:**
+
 ```javascript
 MathUtils.factorial(5); // 120
 MathUtils.factorial(0); // 1
@@ -103,14 +111,16 @@ MathUtils.factorial(0); // 1
 Calcula el n-ésimo número de Fibonacci.
 
 **Parámetros:**
+
 - `n` - Posición en la secuencia (≥ 0)
 
 **Retorna:** El n-ésimo número de Fibonacci
 
 **Ejemplo:**
+
 ```javascript
-MathUtils.fibonacci(0);  // 0
-MathUtils.fibonacci(1);  // 1
+MathUtils.fibonacci(0); // 0
+MathUtils.fibonacci(1); // 1
 MathUtils.fibonacci(10); // 55
 ```
 
@@ -123,15 +133,17 @@ MathUtils.fibonacci(10); // 55
 Determina si un número es primo.
 
 **Parámetros:**
+
 - `n` - Número entero a verificar
 
 **Retorna:** `true` si es primo, `false` en caso contrario
 
 **Ejemplo:**
+
 ```javascript
-MathUtils.isPrime(2);  // true
+MathUtils.isPrime(2); // true
 MathUtils.isPrime(17); // true
-MathUtils.isPrime(4);  // false
+MathUtils.isPrime(4); // false
 ```
 
 **Complejidad:** O(√n)
@@ -143,12 +155,14 @@ MathUtils.isPrime(4);  // false
 Calcula el Máximo Común Divisor usando el algoritmo de Euclides.
 
 **Parámetros:**
+
 - `a` - Primer número
 - `b` - Segundo número
 
 **Retorna:** El MCD de a y b
 
 **Ejemplo:**
+
 ```javascript
 MathUtils.gcd(48, 18); // 6
 MathUtils.gcd(17, 13); // 1
@@ -161,14 +175,16 @@ MathUtils.gcd(17, 13); // 1
 Calcula el Mínimo Común Múltiplo.
 
 **Parámetros:**
+
 - `a` - Primer número
 - `b` - Segundo número
 
 **Retorna:** El MCM de a y b
 
 **Ejemplo:**
+
 ```javascript
-MathUtils.lcm(4, 6);  // 12
+MathUtils.lcm(4, 6); // 12
 MathUtils.lcm(15, 20); // 60
 ```
 
@@ -179,13 +195,15 @@ MathUtils.lcm(15, 20); // 60
 Determina si un número es perfecto (igual a la suma de sus divisores propios).
 
 **Parámetros:**
+
 - `n` - Número a verificar
 
 **Retorna:** `true` si es perfecto, `false` en caso contrario
 
 **Ejemplo:**
+
 ```javascript
-MathUtils.isPerfect(6);  // true (1 + 2 + 3 = 6)
+MathUtils.isPerfect(6); // true (1 + 2 + 3 = 6)
 MathUtils.isPerfect(28); // true (1 + 2 + 4 + 7 + 14 = 28)
 MathUtils.isPerfect(12); // false
 ```
@@ -197,14 +215,16 @@ MathUtils.isPerfect(12); // false
 Calcula la media aritmética.
 
 **Parámetros:**
+
 - `numbers` - Array de números
 
 **Retorna:** La media aritmética
 
 **Ejemplo:**
+
 ```javascript
 MathUtils.mean([1, 2, 3, 4, 5]); // 3
-MathUtils.mean([10, 20, 30]);    // 20
+MathUtils.mean([10, 20, 30]); // 20
 ```
 
 ---
@@ -214,14 +234,16 @@ MathUtils.mean([10, 20, 30]);    // 20
 Calcula la mediana.
 
 **Parámetros:**
+
 - `numbers` - Array de números
 
 **Retorna:** La mediana
 
 **Ejemplo:**
+
 ```javascript
 MathUtils.median([1, 2, 3, 4, 5]); // 3
-MathUtils.median([1, 2, 3, 4]);    // 2.5
+MathUtils.median([1, 2, 3, 4]); // 2.5
 ```
 
 ---
@@ -231,11 +253,13 @@ MathUtils.median([1, 2, 3, 4]);    // 2.5
 Encuentra el/los valor(es) que aparecen más frecuentemente.
 
 **Parámetros:**
+
 - `numbers` - Array de números
 
 **Retorna:** Array con los valores modales
 
 **Ejemplo:**
+
 ```javascript
 MathUtils.mode([1, 2, 2, 3, 4]); // [2]
 MathUtils.mode([1, 1, 2, 2, 3]); // [1, 2]
@@ -248,11 +272,13 @@ MathUtils.mode([1, 1, 2, 2, 3]); // [1, 2]
 Calcula la desviación estándar.
 
 **Parámetros:**
+
 - `numbers` - Array de números
 
 **Retorna:** La desviación estándar
 
 **Ejemplo:**
+
 ```javascript
 MathUtils.standardDeviation([1, 2, 3, 4, 5]); // ~1.58
 ```
@@ -264,14 +290,16 @@ MathUtils.standardDeviation([1, 2, 3, 4, 5]); // ~1.58
 Calcula la distancia euclidiana entre dos puntos.
 
 **Parámetros:**
+
 - `point1` - Primer punto `{x: number, y: number}`
 - `point2` - Segundo punto `{x: number, y: number}`
 
 **Retorna:** La distancia entre los puntos
 
 **Ejemplo:**
+
 ```javascript
-MathUtils.distance({x: 0, y: 0}, {x: 3, y: 4}); // 5
+MathUtils.distance({ x: 0, y: 0 }, { x: 3, y: 4 }); // 5
 ```
 
 ---
@@ -281,11 +309,13 @@ MathUtils.distance({x: 0, y: 0}, {x: 3, y: 4}); // 5
 Calcula el área de un círculo.
 
 **Parámetros:**
+
 - `radius` - Radio del círculo
 
 **Retorna:** El área del círculo
 
 **Ejemplo:**
+
 ```javascript
 MathUtils.circleArea(5); // ~78.54
 ```
@@ -371,23 +401,23 @@ npm run test:coverage
 ### Ejemplo de Prueba
 
 ```javascript
-import MathUtils from '../src/index';
+import MathUtils from "../src/index";
 
-describe('Basic Math Functions', () => {
-  describe('factorial', () => {
-    it('should calculate factorial correctly', () => {
+describe("Basic Math Functions", () => {
+  describe("factorial", () => {
+    it("should calculate factorial correctly", () => {
       expect(MathUtils.factorial(0)).toBe(1);
       expect(MathUtils.factorial(1)).toBe(1);
       expect(MathUtils.factorial(5)).toBe(120);
     });
 
-    it('should throw error for negative numbers', () => {
+    it("should throw error for negative numbers", () => {
       expect(() => MathUtils.factorial(-1)).toThrow();
     });
   });
 
-  describe('fibonacci', () => {
-    it('should calculate fibonacci numbers correctly', () => {
+  describe("fibonacci", () => {
+    it("should calculate fibonacci numbers correctly", () => {
       expect(MathUtils.fibonacci(0)).toBe(0);
       expect(MathUtils.fibonacci(1)).toBe(1);
       expect(MathUtils.fibonacci(10)).toBe(55);
@@ -400,12 +430,12 @@ describe('Basic Math Functions', () => {
 
 ### Benchmarks
 
-| Función | Operaciones/seg | Complejidad |
-|---------|----------------|-------------|
-| factorial(100) | ~1,000,000 | O(n) |
-| fibonacci(40) | ~100,000 | O(n) |
-| isPrime(1000000) | ~10,000 | O(√n) |
-| gcd(large_nums) | ~5,000,000 | O(log n) |
+| Función          | Operaciones/seg | Complejidad |
+| ---------------- | --------------- | ----------- |
+| factorial(100)   | ~1,000,000      | O(n)        |
+| fibonacci(40)    | ~100,000        | O(n)        |
+| isPrime(1000000) | ~10,000         | O(√n)       |
+| gcd(large_nums)  | ~5,000,000      | O(log n)    |
 
 ### Optimizaciones
 
